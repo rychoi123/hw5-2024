@@ -3,7 +3,7 @@
     0% {width: 25px; opacity: 0;}
     100% {width: 475px; opacity: 1;}
   }
-.logo {
+#logo {
     animation:specialEffect 5s ease-in-out forwards;
 }
 
@@ -124,10 +124,13 @@ body > header:first-of-type{
     .nav_links{
         display:flex;
         flex-direction: row;
+        flex-grow: 3;
+        justify-content: space-around;
     }
     .pricing{
         display: flex;
         align-items: flex-end;
+        flex-wrap: nowrap;
     }
     .card{
         display: flex;
