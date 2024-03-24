@@ -1,3 +1,4 @@
+/*animation effect applied to logo*/
 @keyframes specialEffect {
     0% {width: 25px; opacity: 0;}
     100% {width: 475px; opacity: 1;}
@@ -9,10 +10,10 @@
 
 body{
     font-family: 'Poppins', serif;
-    background-color: #f1f1f1;
     background-image: url("concrete_seamless.png");
+    background-color: #f1f1f1;
 }
-
+/*recall this applies not only to the initial header at the top but all unstyled headers added later on*/
 header{
     display:flex;
     align-items: center;
@@ -37,10 +38,13 @@ header{
     padding-bottom: 20px;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
+    width: 100%;
 }
+/*default card setting have white background need to curve this part also*/
 .card{
-    overflow:hidden;
     flex-basis: 450px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
 }
 
 .pricing{
@@ -62,7 +66,7 @@ header{
     flex-wrap: wrap;
     justify-content: center;
 }
-
+/*following setting will apply to any viewport with size above 1200px*/
 @media only screen and (min-width: 1200px){
 header{
     display:flex;
@@ -77,14 +81,18 @@ header{
 
 .pricing{
     display:flex;
-    flex-direction: row;
 }
-
 .card{
     display:flex;
     flex-wrap: wrap;
     flex-basis: 275px;
 }
+/*withouth width 100% the header may look awkward depending on your display size*/
+.card > header{
+    width: 100%;
+    justify-content: center;
+}
+
 
 /*if you don't have body > this function doesn't work. (It will run but different header will be fixed)*/
 body > header:first-of-type{
@@ -96,6 +104,7 @@ body > header:first-of-type{
 }
 
 }
+/*setting your device to reduced motion will stop the animation and leave the logo only*/
 @media (prefers-reduced-motion){
     .logo{
         animation: none;
@@ -116,14 +125,12 @@ body > header:first-of-type{
     .pricing{
         display: flex;
         align-items: flex-end;
-        flex-direction: row;
     }
     .card{
         display: flex;
         flex-direction: row;
         flex-basis: 325px;
         flex-wrap: wrap;
-        justify-content: center;
         border:2px solid #45ADAD;
     }
     /*if you don't add either one of the class or id either the picture or header2 saying gallery will remain*/
