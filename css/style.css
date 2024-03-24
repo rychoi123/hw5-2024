@@ -71,6 +71,7 @@ header{
 /*puts logo to left end and nav bar to right end*/
 header{
     display:flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content:space-between;
 }
@@ -121,10 +122,14 @@ body > header:first-of-type{
         font-family: Arial, Helvetica;
         background-image: none;
     }
+
+    nav{
+        width: 100%;
+        
+    }
     .nav_links{
         display:flex;
         flex-direction: row;
-        flex-grow: 3;
         justify-content: space-around;
     }
     .pricing{
@@ -137,6 +142,7 @@ body > header:first-of-type{
         flex-direction: row;
         flex-basis: 325px;
         flex-wrap: wrap;
+        text-align: center;
         border:2px solid #45ADAD;
     }
     /*if you don't add either one of the class or id either the picture or header2 saying gallery will remain*/
